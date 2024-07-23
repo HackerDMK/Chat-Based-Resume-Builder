@@ -19,6 +19,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cookieParser());
+connectToMongoDB();
 
 app.use((req, res, next) => {
 	res.setHeader("Access-Control-Allow-Origin", process.env.CLIENT_URL);
@@ -36,6 +37,5 @@ app.get("*", (req, res) => {
 });
 
 server.listen(PORT, () => {
-	connectToMongoDB();
 	console.log(`Server Running on port ${PORT}`);
 });
