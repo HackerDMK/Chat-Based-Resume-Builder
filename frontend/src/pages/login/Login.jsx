@@ -1,5 +1,5 @@
 import { useGoogleLogin } from "@react-oauth/google";
-import axios from "axios";
+import axios from "../../AxiosInstance";
 
 const Login = () => {
   if (localStorage.getItem("jwt")) {
@@ -21,7 +21,7 @@ const Login = () => {
 
   async function getUserInfo(codeResponse) {
     const response = await axios.post(
-      "http://localhost:5000/api/auth/google-login",
+      "auth/google-login",
       { code: codeResponse.code }
     );
     return await response.data;
