@@ -1,4 +1,4 @@
-# Chat Based Resume Builder
+# Chat Based Resume Builder - [Live Link](https://resume.hackerdmk.live)
 Chat Based Resume Builder is a project that provides a chat interface for users to build and manage their resumes using AI. The project consists of a backend built with Express and Node.js, utilizing the [Anthropic API](https://www.anthropic.com/api), and a frontend built with React and Vite.js. Users can print their resumes or download them as DOCX files.
 
 ## Project Structure
