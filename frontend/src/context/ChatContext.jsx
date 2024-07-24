@@ -111,7 +111,7 @@ export const ChatContextProvider = ({ children, initialChatId, userId }) => {
         addMessage(initialBotMessage);
 
         const response = await fetch(
-          `chat/send/${chatIdRef.current || ""}`,
+          `${import.meta.env.VITE_API_URL}chat/send/${chatIdRef.current || ""}`,
           {
             method: "POST",
             headers: {
